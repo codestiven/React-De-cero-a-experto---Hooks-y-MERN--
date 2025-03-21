@@ -21,14 +21,9 @@ Este curso tiene como objetivo llevarme desde un conocimiento básico de React h
 ## 📂 Contenido del Repositorio
 Este repositorio está organizado de la siguiente manera:
 ```
-📁 react-curso
- ├── 📂 seccion-01-introduccion
- ├── 📂 seccion-02-hooks
- ├── 📂 seccion-03-context-api
- ├── 📂 seccion-04-redux
- ├── 📂 seccion-05-mern-stack
- ├── 📂 seccion-06-autenticacion
- ├── 📂 proyectos-finales
+📁 React De cero a experto ( Hooks y MERN )
+ ├── 📂 01-intro-react
+ ├── 📂 02 -intro-javascript
  ├── 📜 README.md
 ```
 Cada carpeta corresponde a una sección del curso, e incluye los ejercicios y proyectos realizados en esa parte.
@@ -41,12 +36,14 @@ Para seguir este curso y ejecutar los proyectos en este repositorio, es recomend
 - Git para el control de versiones.
 - Capacidad de instalar paquetes y dependencias.
 - Un navegador actualizado (preferiblemente Google Chrome o Firefox).
+- Postman
+- MongoDBCompass
 
 ## 🚀 Instalación y Uso
 Si deseas clonar este repositorio y probar los proyectos, sigue estos pasos:
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/react-curso.git
+   git clone https://github.com/codestiven/React-De-cero-a-experto---Hooks-y-MERN--.git
    ```
 2. Accede al directorio del proyecto:
    ```bash
