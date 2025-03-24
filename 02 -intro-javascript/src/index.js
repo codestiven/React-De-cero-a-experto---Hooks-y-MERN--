@@ -1,11 +1,13 @@
-// Tarea
-// 2. Tiene que retornar un objeto implícito
-// 3. Pruebas
 
-const getUsuarioActivo = (nombre) => ({
-    uid: 'ABC567',
-    username: nombre
-});
+const personajes = ['goku', 'vegeta', 'trunks'];
 
-const usuarioActivo = getUsuarioActivo('Fernando');
-console.log(usuarioActivo);
+const [ personaje1, personaje2, personaje3] = personajes;
+
+// console.log(personaje1, personaje2, personaje3);
+
+const usestate = (valor) => {
+    return [valor, () => { console.log('Hola Mundo') }];
+}
+
+const [nombre, setNombre] = usestate('Goku');
+setNombre();
