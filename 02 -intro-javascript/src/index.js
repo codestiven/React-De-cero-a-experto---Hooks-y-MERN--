@@ -1,13 +1,11 @@
+import { heroes} from './data/heroes';
 
-const personajes = ['goku', 'vegeta', 'trunks'];
-
-const [ personaje1, personaje2, personaje3] = personajes;
-
-// console.log(personaje1, personaje2, personaje3);
-
-const usestate = (valor) => {
-    return [valor, () => { console.log('Hola Mundo') }];
+const getHeroeById = (id) => {
+    return heroes.find(heroe => heroe.id === id);
 }
 
-const [nombre, setNombre] = usestate('Goku');
-setNombre();
+const getHeroesByOwner = (owner) => {
+    return heroes.filter(heroe => heroe.owner === owner);
+}
+
+console.log(getHeroesByOwner('DC'));
