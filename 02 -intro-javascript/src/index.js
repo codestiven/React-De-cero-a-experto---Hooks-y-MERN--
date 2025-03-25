@@ -1,37 +1,15 @@
-import { heroes } from './data/heroes';
+const apikey = "zNXMRK9dCTkKzPqJ9Gq4xJ7KXf3JYYuh";
 
-// const getheroesbyid = (id) => heroes.find((heroe) => heroe.id === id);
+const peticion = fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apikey}`);
 
-// const promesa = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     const heroe = getheroesbyid(2);
-//     resolve(heroe);
-//     reject('No se pudo encontrar el héroe');
-//   }, 2000);
-// });
+peticion.then(resp => resp.json())
+  .then(({ data }) => {
+    const { url } = data.images.original;
+    console.log(url);
 
+    const img = document.createElement("img");
+    img.src = url;
 
-
-// promesa.then((mensaje) => {
-//   console.log(mensaje);
-// }).catch((err) => {
-//     console.warn(err);
-// });
-
-
-const getheroesbyidAsync = (id) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const heroe = getheroesbyid(id);
-      if (heroe) {
-        resolve(heroe);
-      } else {
-        reject('No se pudo encontrar el héroe');
-      }
-    }, 2000);
-  });
-}
-
-getheroesbyidAsync(1)
-  .then(console.log)
+    document.body.append(img);
+  })
   .catch(console.warn);
