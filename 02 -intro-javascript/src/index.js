@@ -1,11 +1,37 @@
-import { heroes} from './data/heroes';
+import { heroes } from './data/heroes';
 
-const getHeroeById = (id) => {
-    return heroes.find(heroe => heroe.id === id);
+// const getheroesbyid = (id) => heroes.find((heroe) => heroe.id === id);
+
+// const promesa = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const heroe = getheroesbyid(2);
+//     resolve(heroe);
+//     reject('No se pudo encontrar el héroe');
+//   }, 2000);
+// });
+
+
+
+// promesa.then((mensaje) => {
+//   console.log(mensaje);
+// }).catch((err) => {
+//     console.warn(err);
+// });
+
+
+const getheroesbyidAsync = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const heroe = getheroesbyid(id);
+      if (heroe) {
+        resolve(heroe);
+      } else {
+        reject('No se pudo encontrar el héroe');
+      }
+    }, 2000);
+  });
 }
 
-const getHeroesByOwner = (owner) => {
-    return heroes.filter(heroe => heroe.owner === owner);
-}
-
-console.log(getHeroesByOwner('DC'));
+getheroesbyidAsync(1)
+  .then(console.log)
+  .catch(console.warn);
