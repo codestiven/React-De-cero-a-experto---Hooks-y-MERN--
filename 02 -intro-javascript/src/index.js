@@ -1,15 +1,5 @@
-const apikey = "zNXMRK9dCTkKzPqJ9Gq4xJ7KXf3JYYuh";
-
-const peticion = fetch(`https://api.giphy.com/v1/gifs/random?api_key=${apikey}`);
-
-peticion.then(resp => resp.json())
-  .then(({ data }) => {
-    const { url } = data.images.original;
-    console.log(url);
-
-    const img = document.createElement("img");
-    img.src = url;
-
-    document.body.append(img);
-  })
-  .catch(console.warn);
+const getImage = async () => {  
+    const response = await fetch('https://dog.ceo/api/breeds/image/random');
+    const data = await response.json();
+    return data.message;
+};
