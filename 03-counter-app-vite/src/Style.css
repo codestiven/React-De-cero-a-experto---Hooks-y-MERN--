@@ -1,0 +1,8 @@
+html,css {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(90, 90, 170);
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}

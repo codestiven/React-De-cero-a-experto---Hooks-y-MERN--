@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import App from './HelloWordApp';
 import FistApp from './FistApp';
 
+import './Style.css';
+
 
 
 
