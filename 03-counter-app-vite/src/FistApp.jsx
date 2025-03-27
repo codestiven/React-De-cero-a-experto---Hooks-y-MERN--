@@ -1,12 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'; 
+
 
 
 const getsaludo = () => {
   return `Hola Mundo ${new Date().getFullYear()}`
 }
 
-const FistApp = ( {title , numero } ) => {
+const FistApp = ( {
+  title = "hola mundo" , 
+  numero = 5
+} ) => {
 
   return (
     <>
@@ -22,6 +26,11 @@ const FistApp = ( {title , numero } ) => {
 FistApp.propTypes = {
   title: PropTypes.string.isRequired,
 
+}
+
+FistApp.defaultProps = {
+  title: "No hay titulo",
+  numero: 0,
 }
 
 export default FistApp

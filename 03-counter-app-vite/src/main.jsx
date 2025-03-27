@@ -9,4 +9,4 @@ import './Style.css';
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<FistApp  />);
+ReactDOM.createRoot(document.getElementById('root')).render(<FistApp title = "aaaa"  />);
