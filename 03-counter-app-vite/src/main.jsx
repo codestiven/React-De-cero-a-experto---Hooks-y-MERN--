@@ -6,6 +6,9 @@ import FistApp from './FistApp';
 import CounterApp from './CounterApp';
 
 
+import './Style.css';
+
+
 
 
 
