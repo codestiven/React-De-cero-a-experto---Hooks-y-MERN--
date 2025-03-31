@@ -24,6 +24,7 @@ Este repositorio está organizado de la siguiente manera:
 📁 React De cero a experto ( Hooks y MERN )
  ├── 📂 01-intro-react
  ├── 📂 02 -intro-javascript
+ ├── 📂 03-counter-app-vite
  ├── 📜 README.md
 ```
 Cada carpeta corresponde a una sección del curso, e incluye los ejercicios y proyectos realizados en esa parte.
