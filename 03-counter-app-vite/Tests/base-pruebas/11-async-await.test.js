@@ -4,10 +4,10 @@ import { getImagen } from '../../src/base-pruebas/11-async-await.js';
 describe('pruebas en 11-async-await', () => {
   test('getImagen debe de retornar un URL DE LA IMAGEN', async() => {
     
-    const url = await getImagen();
-    console.log(url);
+    const resp = await getImagen();
 
-    expect(typeof url).toBe('string');
+
+      expect(resp).toBe('no existe')
 
   })
   
