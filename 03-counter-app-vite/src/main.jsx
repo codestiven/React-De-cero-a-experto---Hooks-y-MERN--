@@ -14,4 +14,9 @@ import './Style.css';
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<CounterApp value={10}  />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        {/* <CounterApp value={10}  /> */}
+        <FistApp title="Hola, soy Goku" subtitle="Soy un subtitulo" />
+    </React.StrictMode>
+);
