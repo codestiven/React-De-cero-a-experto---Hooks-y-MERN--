@@ -32,7 +32,7 @@ const CounterApp = ({ value }) => {
             <button onClick={rescounter}>
                 -1
             </button>
-            <button onClick={resetcounter}>
+            <button aria-label='btn-reset' onClick={resetcounter}>
                 Reset
             </button>
         </>
