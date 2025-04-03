@@ -8,13 +8,15 @@ const getsaludo = () => {
 }
 
 const FistApp = ( {
-  title = "hola mundo" , 
+  title = "hola mundo" ,
+  subtitle = "Soy un subtitulo",
   numero = 5
 } ) => {
 
   return (
     <>
-      <h1>{title}</h1>
+      <h1 data-testid="test-title" >{title}</h1>
+      <h2>{subtitle}</h2>
       <h1>Stiven</h1>
       <p> {numero + 1} </p>
 
