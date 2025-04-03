@@ -17,7 +17,7 @@ const FistApp = ( {
     <>
       <h1 data-testid="test-title" >{title}</h1>
       <h2>{subtitle}</h2>
-      <h1>Stiven</h1>
+      <h2>Stiven</h2>
       <p> {numero + 1} </p>
 
 
