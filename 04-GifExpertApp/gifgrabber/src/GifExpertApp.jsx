@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 
+
+
 function GifExpertApp() {
   
   const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
 
 
+
+  const OnAddCategory = (newCategory) => {
+    setCategories([...categories, newCategory]);
+  }
 
 
   return (
@@ -20,7 +26,25 @@ function GifExpertApp() {
           return <li key={category}>{category}</li>
         })
       }
+
+
     </ol>
+
+
+
+      <button onClick={() => OnAddCategory("aaaaaa") }>Agregar</button>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     {/* input */}
