@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const AddCategory = ({setCategories}) => {
+const AddCategory = ({ OnAddCategory }) => {
 
 
     const [inputValue, setInputValue] = useState('One Punch')
@@ -20,7 +20,9 @@ const AddCategory = ({setCategories}) => {
 
 // Si el valor es menor o igual a 1 no hace nada
 
-        setCategories(categories => [inputValue, ...categories]); // Agrega el nuevo valor al array de categorias
+        // setCategories(categories => [inputValue, ...categories]);
+        OnAddCategory(inputValue.trim()); // Llama a la funcion OnAddCategory que se pasa como prop y le pasa el valor del input
+
     }
 
 
