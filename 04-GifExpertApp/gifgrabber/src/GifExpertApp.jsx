@@ -10,6 +10,11 @@ function GifExpertApp() {
 
 
   const OnAddCategory = (newCategory) => {
+
+    if(newCategory.includes(categories)) return; // Si el valor ya existe no hace nada
+
+
+
     setCategories([...categories, newCategory]);
   }
 

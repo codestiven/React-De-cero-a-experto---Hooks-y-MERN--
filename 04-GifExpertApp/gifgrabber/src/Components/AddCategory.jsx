@@ -12,7 +12,7 @@ const AddCategory = ({ OnAddCategory }) => {
 
     const onSubmit = (event) => {
         event.preventDefault(); // Evita que se recargue la pagina al enviar el formulario
-        if (inputValue.trim().length <= 1) return; // Si el valor es menor o igual a 1 no hace nada
+        if (inputValue.trim().length <= 0) return; // Si el valor es menor o igual a 1 no hace nada
 
         setInputValue(''); // Limpia el input
         console.log(inputValue); // Muestra el valor en la consola
