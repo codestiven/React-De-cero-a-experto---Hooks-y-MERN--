@@ -21,8 +21,8 @@ function GifExpertApp() {
 
       <h1>GifExpertApp</h1>
 
-      <AddCategory/>
-      <button onClick={() => OnAddCategory("aaaaaa")}>Agregar</button>
+      <AddCategory setCategories={setCategories} />
+      {/* <button onClick={() => OnAddCategory("aaaaaa")}>Agregar</button> */}
 
 
 
