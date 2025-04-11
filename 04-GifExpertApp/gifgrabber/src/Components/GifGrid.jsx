@@ -27,6 +27,9 @@ const GifGrid = ({ category }) => {
     <div>
 
       <h3>{category}</h3>
+      {
+        isLoading && <h2>Loading...</h2>
+      }
 
       <div className='card-grid'>
         {
