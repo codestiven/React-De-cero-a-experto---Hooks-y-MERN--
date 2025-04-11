@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const AddCategory = ({ OnAddCategory }) => {
+export const AddCategory = ({ OnAddCategory }) => {
 
 
     const [inputValue, setInputValue] = useState('One Punch')
@@ -40,5 +40,3 @@ const AddCategory = ({ OnAddCategory }) => {
 
     )
 }
-
-export default AddCategory

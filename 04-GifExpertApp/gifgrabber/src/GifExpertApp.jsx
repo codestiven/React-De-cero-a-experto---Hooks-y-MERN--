@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import AddCategory from './Components/AddCategory'
-import GifGrid from './Components/GifGrid';
+import { AddCategory, GifGrid } from './Components'
+
 
 
 

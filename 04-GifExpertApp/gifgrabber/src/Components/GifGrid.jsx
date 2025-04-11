@@ -4,11 +4,11 @@ import Gifitem from './Gifitem';
 import { useFetchGifs } from '../Hooks/useFetchGifs'
 
 
-const GifGrid = ({ category }) => {
+export const GifGrid = ({ category }) => {
 
 
 
-  const { images, isLoading } = useFetchGifs(category);
+    const { images, isLoading } = useFetchGifs(category);
 
   console.log(isLoading);
 
@@ -47,4 +47,4 @@ const GifGrid = ({ category }) => {
   )
 }
 
-export default GifGrid
+
