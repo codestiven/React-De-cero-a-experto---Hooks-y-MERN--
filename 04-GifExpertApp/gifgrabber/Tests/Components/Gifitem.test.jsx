@@ -11,4 +11,11 @@ describe('Pruebas en <Gifitem />', () => {
         expect(container).toMatchSnapshot();
     });
 
+    test('debe de mostrar la imagen con el URL y el ALT indicado', () => {
+        const { getByRole } = render(<Gifitem title={title} url={url} />);
+        const { src, alt } = getByRole('img');
+        expect(src).toBe(url);
+        expect(alt).toBe(title);
+    });
+
 });
