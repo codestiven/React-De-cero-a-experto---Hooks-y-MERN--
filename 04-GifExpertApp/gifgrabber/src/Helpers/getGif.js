@@ -1,6 +1,6 @@
 
 
-export const Getgif = async (category) => {
+export const getGifs = async (category) => {
     const apiKey = 'Hdz7eqp6pau6ewBdpvTIYQTye6dVb4FH';
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${category}&limit=20`;
     const resp = await fetch(url);
@@ -19,4 +19,3 @@ export const Getgif = async (category) => {
 }
 
 
-Getgif('One Punch')
