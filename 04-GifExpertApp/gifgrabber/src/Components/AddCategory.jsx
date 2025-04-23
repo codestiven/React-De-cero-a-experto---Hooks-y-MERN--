@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({ OnAddCategory }) => {
 
@@ -39,4 +40,8 @@ export const AddCategory = ({ OnAddCategory }) => {
      
 
     )
+}
+
+AddCategory.propTypes = {
+    OnAddCategory: PropTypes.func.isRequired,
 }
