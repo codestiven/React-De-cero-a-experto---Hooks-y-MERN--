@@ -15,5 +15,22 @@ describe('pruevas en AddCategory', () => {
 
     })
 
+    test('debe de llamar onNewcategory si el input tiene un valor', () => {
+
+        const inputValue = 'Saitama';
+       
+
+        render(<AddCategory OnAddCategory={() => { }} />)
+
+        const input = screen.getByRole('textbox'); // Obtiene el elemento del input por su rol
+        const form = screen.getByRole('form');
+        fireEvent.input(input, { target: { value: inputValue } })
+        fireEvent.submit(form);
+
+        screen.debug() // Muestra el DOM actual en la consola para depuración
+      
+    })
+    
+
 
 })
