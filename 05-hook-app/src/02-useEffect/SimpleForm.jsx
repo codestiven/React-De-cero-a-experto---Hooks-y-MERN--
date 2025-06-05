@@ -30,7 +30,7 @@ const SimpleForm = () => {
         <hr />
 
           <input type="text" placeholder='Username' name='username' value={username} onChange={handleInputChange} />
-          <input type="text" placeholder='Email' name='Email' value={email} onChange={handleInputChange} />
+          <input type="text" placeholder='Email' name='email' value={email} onChange={handleInputChange} />
 
       
     </>
