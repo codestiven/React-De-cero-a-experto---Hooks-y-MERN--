@@ -1,40 +1,67 @@
-import React, { useEffect } from 'react'
+import { useEffect, useState } from 'react';
+import { Message } from './Message';
 
-const SimpleForm = () => {
-    const [formState, setformState] = React.useState({
-        username: 'lolo',
-        email: 'fernando@gmail.com'
+
+export const SimpleForm = () => {
+
+  const [formState, setFormState] = useState({
+    username: 'strider',
+    email: 'fernando@google.com'
+  });
+
+  const { username, email } = formState;
+
+  const onInputChange = ({ target }) => {
+    const { name, value } = target;
+    setFormState({
+      ...formState,
+      [name]: value
     });
-
-    const { username, email } = formState;
-
-    const handleInputChange = ({ target }) => {
-        const { name, value } = target;
-
-        setformState({
-            ...formState,
-            [name]: value
-        });
-    }
+  }
 
 
+  useEffect(() => {
+    // console.log('useEffect called!');
+  }, []);
 
-    useEffect(() => {
-        console.log('useEffect called');
-    }, [formState]);
+  useEffect(() => {
+    // console.log('formState changed!');
+  }, [formState]);
+
+  useEffect(() => {
+    // console.log('email changed!');
+  }, [email]);
+
+
 
   return (
     <>
+      <h1>Formulario Simple</h1>
+      <hr />
 
-        <h1>Simple Form</h1>
-        <hr />
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Username"
+        name="username"
+        value={username}
+        onChange={onInputChange}
+      />
 
-          <input type="text" placeholder='Username' name='username' value={username} onChange={handleInputChange} />
-          <input type="text" placeholder='Email' name='email' value={email} onChange={handleInputChange} />
+      <input
+        type="email"
+        className="form-control mt-2"
+        placeholder="fernando@google.com"
+        name="email"
+        value={email}
+        onChange={onInputChange}
+      />
 
-      
+
+      {
+        (username === 'strider2') && <Message />
+      }
+
     </>
   )
 }
-
-export default SimpleForm

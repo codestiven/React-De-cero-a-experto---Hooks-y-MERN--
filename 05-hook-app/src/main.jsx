@@ -5,8 +5,7 @@ import './index.css'
 import HooksApp from './hooksApp.jsx'
 import CounterApp from './01-useState/CounterApp.jsx'
 import { CounterWithCustomHook } from './01-useState/CounterwithCustomHook.jsx'
-import SimpleForm from './02-useEffect/SimpleForm.jsx'
-
+import { SimpleForm } from './02-useEffect/SimpleForm.jsx'  // ✅ Corregido
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
