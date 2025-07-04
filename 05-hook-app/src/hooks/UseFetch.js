@@ -1,7 +1,7 @@
 import React, { use, useEffect } from 'react'
 import { useState } from 'react'
 
-const UseFetch = () => {
+const UseFetch = (URL) => {
 
     const [state, setState] = useState({
         data: null,
@@ -13,14 +13,47 @@ const UseFetch = () => {
 
     useEffect(() => {
         getFetch();
-    }, []);
+    }, [URL]);
+
+    const setloading = () => {
+        setState({
+            data: null,
+            Isloading: true,
+            HasError: false,
+            error: null
+        });
+    }
 
     const getFetch = async () => {
 
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        setloading();
+
+
+
+        const response = await fetch(URL);
         const data = await response.json();
 
-        console.log(data);
+        //sleep
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        if (!response.ok) {
+            setState({
+                data: null,
+                Isloading: false,
+                HasError: true,
+                error: data.message || 'Something went wrong'
+            });
+            return;
+        }
+
+        setState({
+            data: data,
+            Isloading: false,
+            HasError: false,
+            error: null
+        });
+
+        // console.log(data);
     }
 
 

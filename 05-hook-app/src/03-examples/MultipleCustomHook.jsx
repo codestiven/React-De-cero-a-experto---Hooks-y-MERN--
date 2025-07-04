@@ -3,7 +3,8 @@ import UseFetch from '../hooks/UseFetch'
 
 const MultipleCustomHook = () => {
 
-  UseFetch();
+
+  const { data, Isloading, HasError, error } = UseFetch('https://pokeapi.co/api/v2/pokemon/ditto');
 
 
 
@@ -13,6 +14,12 @@ const MultipleCustomHook = () => {
   return (
     <div>
       
+      <h1>Multiple Custom Hook</h1>
+
+      { Isloading && <h2>Loading...</h2> }
+      <hr />
+
+      <pre>{ data?.name }</pre>
     </div>
   )
 }
