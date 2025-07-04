@@ -7,7 +7,7 @@ const MultipleCustomHook = () => {
 
 
 
-  const { counter, increment, decrement, reset } = useCounter();
+  const { counter, increment, decrement, reset } = useCounter(1);
 
 
 
