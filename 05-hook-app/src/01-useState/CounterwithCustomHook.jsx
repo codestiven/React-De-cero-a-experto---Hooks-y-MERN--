@@ -1,9 +1,6 @@
-import { useCounter } from '../hooks/useCounter.js';
+
 
 export const CounterWithCustomHook = () => {
-
-  const { counter, increment, decrement, reset } = useCounter();
-
 
   return (
     <>
