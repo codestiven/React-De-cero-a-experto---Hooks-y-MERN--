@@ -1,11 +1,11 @@
+import React from 'react';
+// import { memo } from 'react';
 
-const Small = ({value}) => {
-    console.log('Me volvi a generar :(');
-  return (
-    <>
-          <small>{value}</small>
-    </>
-  )
-}
+export const Small = React.memo(({ value }) => {
 
-export default Small
+    console.log(' Me volví a dibujar :( ');
+
+    return (
+        <small>{ value }</small>
+    )
+})
