@@ -9,9 +9,10 @@ import { SimpleForm } from './02-useEffect/SimpleForm.jsx'  // ✅ Corregido
 import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook.jsx'
 import MultipleCustomHook from './03-examples/MultipleCustomHook.jsx'
 import FocusScrenn from './04-UseRef/FocusScrenn.jsx'
+import Layout from './05-hookLayoutEffect/layout.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FocusScrenn />
+    <Layout />
   </StrictMode>,
 )
