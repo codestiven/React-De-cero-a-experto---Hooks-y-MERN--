@@ -10,9 +10,10 @@ import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook.jsx'
 import MultipleCustomHook from './03-examples/MultipleCustomHook.jsx'
 import FocusScrenn from './04-UseRef/FocusScrenn.jsx'
 import Layout from './05-hookLayoutEffect/layout.jsx'
+import Memo from './06-Memos/Memo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Layout />
+    <Memo />
   </StrictMode>,
 )
