@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './08-useReducer/intro-reducer'
 
 
 // import { HooksApp } from './HooksApp';
